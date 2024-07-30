@@ -3,7 +3,7 @@ version: '3.0'
 services:
   pihole:
     container_name: pihole
-    image: ghcr.io/mariomare22/docker-pihole-unbound:latest
+    image: ghcr.io/annorberg98/docker-pihole-unbound:latest
     hostname: ${HOSTNAME}
     domainname: ${DOMAIN_NAME}
     ports:
@@ -25,8 +25,8 @@ services:
       - DNSSEC=${DNSSEC}
       - DNSMASQ_LISTENING=single
     volumes:
-      - /home/mario/config/pihole/etc_pihole-unbound:/etc/pihole:rw
-  #    - /home/mario/config/pihole/etc_pihole_dnsmasq-unbound:/etc/dnsmasq.d:rw
-  #    - /home/mario/config/pihole/etc_unbound:/etc/unbound/unbound.conf.d/:rw
-      - /home/mario/config/pihole/hosts:/etc/hosts:rw
+      - /home/anton/config/pihole/etc_pihole-unbound:/etc/pihole:rw
+  #    - /home/anton/config/pihole/etc_pihole_dnsmasq-unbound:/etc/dnsmasq.d:rw
+  #    - /home/anton/config/pihole/etc_unbound:/etc/unbound/unbound.conf.d/:rw
+      - /home/anton/config/pihole/hosts:/etc/hosts:rw
     restart: unless-stopped
