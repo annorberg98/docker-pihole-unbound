@@ -25,8 +25,8 @@ services:
       - DNSSEC=${DNSSEC}
       - DNSMASQ_LISTENING=single
     volumes:
-      - /home/anton/config/pihole/etc_pihole-unbound:/etc/pihole:rw
+      - /home/pi/pihole/etc_pihole-unbound:/etc/pihole:rw
   #    - /home/anton/config/pihole/etc_pihole_dnsmasq-unbound:/etc/dnsmasq.d:rw
   #    - /home/anton/config/pihole/etc_unbound:/etc/unbound/unbound.conf.d/:rw
-      - /home/anton/config/pihole/hosts:/etc/hosts:rw
+  #    - /home/pi/pihole/hosts:/etc/hosts:rw
     restart: unless-stopped
